@@ -14,6 +14,8 @@
 		668AFEBD1A6F5A5700B34B95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 668AFEBC1A6F5A5700B34B95 /* Images.xcassets */; };
 		668AFEC01A6F5A5700B34B95 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668AFEBE1A6F5A5700B34B95 /* LaunchScreen.xib */; };
 		668AFECC1A6F5A5700B34B95 /* UIWebViewProgressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 668AFECB1A6F5A5700B34B95 /* UIWebViewProgressTests.m */; };
+		668AFED71A6F5B9D00B34B95 /* DRProgressWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 668AFED61A6F5B9D00B34B95 /* DRProgressWebView.m */; };
+		668AFEDA1A6F79A100B34B95 /* UIView+BookReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 668AFED91A6F79A100B34B95 /* UIView+BookReader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		668AFEC51A6F5A5700B34B95 /* UIWebViewProgressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIWebViewProgressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		668AFECA1A6F5A5700B34B95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		668AFECB1A6F5A5700B34B95 /* UIWebViewProgressTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIWebViewProgressTests.m; sourceTree = "<group>"; };
+		668AFED51A6F5B9D00B34B95 /* DRProgressWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRProgressWebView.h; sourceTree = "<group>"; };
+		668AFED61A6F5B9D00B34B95 /* DRProgressWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRProgressWebView.m; sourceTree = "<group>"; };
+		668AFED81A6F79A100B34B95 /* UIView+BookReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BookReader.h"; sourceTree = "<group>"; };
+		668AFED91A6F79A100B34B95 /* UIView+BookReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BookReader.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,10 @@
 				668AFEBC1A6F5A5700B34B95 /* Images.xcassets */,
 				668AFEBE1A6F5A5700B34B95 /* LaunchScreen.xib */,
 				668AFEAF1A6F5A5600B34B95 /* Supporting Files */,
+				668AFED51A6F5B9D00B34B95 /* DRProgressWebView.h */,
+				668AFED61A6F5B9D00B34B95 /* DRProgressWebView.m */,
+				668AFED81A6F79A100B34B95 /* UIView+BookReader.h */,
+				668AFED91A6F79A100B34B95 /* UIView+BookReader.m */,
 			);
 			path = UIWebViewProgress;
 			sourceTree = "<group>";
@@ -220,7 +230,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				668AFEB81A6F5A5600B34B95 /* ViewController.m in Sources */,
+				668AFEDA1A6F79A100B34B95 /* UIView+BookReader.m in Sources */,
 				668AFEB51A6F5A5600B34B95 /* AppDelegate.m in Sources */,
+				668AFED71A6F5B9D00B34B95 /* DRProgressWebView.m in Sources */,
 				668AFEB21A6F5A5600B34B95 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIWebViewProgress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIWebViewProgress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

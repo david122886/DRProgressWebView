@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +17,105 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPo-TW-uwh" userLabel="Web View1" customClass="DRProgressWebView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="aCi-WC-gsb"/>
+                                </connections>
+                            </webView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-Xp-Zc0" userLabel="Web View2" customClass="DRProgressWebView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="uzD-yx-8BL"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfM-Hv-U4r">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.52156862749999999" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="5oa-xq-s2t"/>
+                                    <constraint firstAttribute="width" secondItem="NfM-Hv-U4r" secondAttribute="height" multiplier="158:55" id="ipA-BT-q0Q"/>
+                                </constraints>
+                                <state key="normal" title="retry">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5oa-xq-s2t"/>
+                                        <exclude reference="ipA-BT-q0Q"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5oa-xq-s2t"/>
+                                        <include reference="ipA-BT-q0Q"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="reTryButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OFK-fd-YtQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tPo-TW-uwh" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="0E0-oC-xJA"/>
+                            <constraint firstItem="tPo-TW-uwh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="6n8-zq-fVH"/>
+                            <constraint firstItem="Ldx-Xp-Zc0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="8I9-ou-9pk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tPo-TW-uwh" secondAttribute="trailing" constant="-16" id="GPn-Lc-b5l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ldx-Xp-Zc0" secondAttribute="trailing" constant="-16" id="I56-de-OTr"/>
+                            <constraint firstAttribute="centerX" secondItem="NfM-Hv-U4r" secondAttribute="centerX" constant="18" id="O8Y-IJ-jWw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="tPo-TW-uwh" secondAttribute="bottom" id="Vj9-LD-42q"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ldx-Xp-Zc0" secondAttribute="bottom" id="gaD-oh-XvQ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="NfM-Hv-U4r" secondAttribute="bottom" constant="190" id="nPc-Ch-cgL"/>
+                            <constraint firstItem="Ldx-Xp-Zc0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="yQO-jL-xop"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="tPo-TW-uwh"/>
+                                <exclude reference="Ldx-Xp-Zc0"/>
+                                <exclude reference="NfM-Hv-U4r"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8I9-ou-9pk"/>
+                                <exclude reference="I56-de-OTr"/>
+                                <exclude reference="yQO-jL-xop"/>
+                                <exclude reference="0E0-oC-xJA"/>
+                                <exclude reference="6n8-zq-fVH"/>
+                                <exclude reference="GPn-Lc-b5l"/>
+                                <exclude reference="O8Y-IJ-jWw"/>
+                                <exclude reference="Vj9-LD-42q"/>
+                                <exclude reference="gaD-oh-XvQ"/>
+                                <exclude reference="nPc-Ch-cgL"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="tPo-TW-uwh"/>
+                                <include reference="Ldx-Xp-Zc0"/>
+                                <include reference="NfM-Hv-U4r"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8I9-ou-9pk"/>
+                                <include reference="I56-de-OTr"/>
+                                <include reference="yQO-jL-xop"/>
+                                <include reference="0E0-oC-xJA"/>
+                                <include reference="6n8-zq-fVH"/>
+                                <include reference="GPn-Lc-b5l"/>
+                                <include reference="O8Y-IJ-jWw"/>
+                                <include reference="Vj9-LD-42q"/>
+                                <include reference="gaD-oh-XvQ"/>
+                                <include reference="nPc-Ch-cgL"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="webView1" destination="tPo-TW-uwh" id="MUN-Hx-fNK"/>
+                        <outlet property="webView2" destination="Ldx-Xp-Zc0" id="67n-Mt-dZy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
