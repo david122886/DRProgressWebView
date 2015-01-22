@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "UIView+BookReader.h"
 #import "DRProgressWebView.h"
+#import "JDStatusBarNotification.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet DRProgressWebView *webView1;
 @property (weak, nonatomic) IBOutlet DRProgressWebView *webView2;
@@ -22,6 +23,12 @@
     self.webView1.delegate = self;
     self.webView2.delegate = self;
     [self.webView2 loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ios2.xxsy.net/pages2/default.aspx"]]];
+    
+    [JDStatusBarNotification setDefaultStyle:^JDStatusBarStyle *(JDStatusBarStyle *style) {
+        style.barColor = [UIColor redColor];
+        style.textColor = [UIColor whiteColor];
+        return style;
+    }];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -42,13 +49,13 @@
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     [webView hiddleActivityindicator];
     [webView hiddleTipMessage];
+    [(DRProgressWebView*)webView setHasSucessesLoaded:YES];
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     NSLog(@"%@,%d",error.localizedDescription,error.code);
     [webView hiddleActivityindicator];
-    NSString *ready = [webView stringByEvaluatingJavaScriptFromString:@"document.body"];
-    if (error.code != NSURLErrorCancelled && ![ready isEqualToString:@"complete"]) {
+    if (error.code != NSURLErrorCancelled && ![(DRProgressWebView*)webView hasSucessesLoaded]) {
         __weak DRProgressWebView *weakWebView = (DRProgressWebView*)webView;
         [webView showReLoadButtoClicked:^{
             if (weakWebView) {
@@ -62,6 +69,9 @@
                 NSLog(@"reload:%@",weakWebView.request);
             }
         }];
+    }
+    if ([(DRProgressWebView*)webView hasSucessesLoaded]) {
+        [JDStatusBarNotification showWithStatus:@"暂无网络连接..." dismissAfter:1];
     }
 }
 @end

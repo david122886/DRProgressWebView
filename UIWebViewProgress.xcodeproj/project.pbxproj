@@ -18,6 +18,9 @@
 		668AFEDA1A6F79A100B34B95 /* UIView+BookReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 668AFED91A6F79A100B34B95 /* UIView+BookReader.m */; };
 		6693CFD21A70ADFD009CA7CF /* online_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6693CFD11A70ADFD009CA7CF /* online_error@2x.png */; };
 		6693CFD41A70AE1E009CA7CF /* wifi_retry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6693CFD31A70AE1E009CA7CF /* wifi_retry@2x.png */; };
+		6693CFDC1A70C152009CA7CF /* JDStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6693CFD71A70C152009CA7CF /* JDStatusBarNotification.m */; };
+		6693CFDD1A70C152009CA7CF /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6693CFD91A70C152009CA7CF /* JDStatusBarStyle.m */; };
+		6693CFDE1A70C152009CA7CF /* JDStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6693CFDB1A70C152009CA7CF /* JDStatusBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,12 @@
 		668AFED91A6F79A100B34B95 /* UIView+BookReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BookReader.m"; sourceTree = "<group>"; };
 		6693CFD11A70ADFD009CA7CF /* online_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "online_error@2x.png"; sourceTree = "<group>"; };
 		6693CFD31A70AE1E009CA7CF /* wifi_retry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifi_retry@2x.png"; sourceTree = "<group>"; };
+		6693CFD61A70C152009CA7CF /* JDStatusBarNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarNotification.h; sourceTree = "<group>"; };
+		6693CFD71A70C152009CA7CF /* JDStatusBarNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarNotification.m; sourceTree = "<group>"; };
+		6693CFD81A70C152009CA7CF /* JDStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarStyle.h; sourceTree = "<group>"; };
+		6693CFD91A70C152009CA7CF /* JDStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarStyle.m; sourceTree = "<group>"; };
+		6693CFDA1A70C152009CA7CF /* JDStatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarView.h; sourceTree = "<group>"; };
+		6693CFDB1A70C152009CA7CF /* JDStatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +100,7 @@
 		668AFEAE1A6F5A5600B34B95 /* UIWebViewProgress */ = {
 			isa = PBXGroup;
 			children = (
+				6693CFD51A70C152009CA7CF /* JDStatusBarNotification */,
 				668AFEB31A6F5A5600B34B95 /* AppDelegate.h */,
 				668AFEB41A6F5A5600B34B95 /* AppDelegate.m */,
 				668AFEB61A6F5A5600B34B95 /* ViewController.h */,
@@ -141,6 +151,19 @@
 				6693CFD11A70ADFD009CA7CF /* online_error@2x.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		6693CFD51A70C152009CA7CF /* JDStatusBarNotification */ = {
+			isa = PBXGroup;
+			children = (
+				6693CFD61A70C152009CA7CF /* JDStatusBarNotification.h */,
+				6693CFD71A70C152009CA7CF /* JDStatusBarNotification.m */,
+				6693CFD81A70C152009CA7CF /* JDStatusBarStyle.h */,
+				6693CFD91A70C152009CA7CF /* JDStatusBarStyle.m */,
+				6693CFDA1A70C152009CA7CF /* JDStatusBarView.h */,
+				6693CFDB1A70C152009CA7CF /* JDStatusBarView.m */,
+			);
+			path = JDStatusBarNotification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +271,10 @@
 				668AFEB81A6F5A5600B34B95 /* ViewController.m in Sources */,
 				668AFEDA1A6F79A100B34B95 /* UIView+BookReader.m in Sources */,
 				668AFEB51A6F5A5600B34B95 /* AppDelegate.m in Sources */,
+				6693CFDD1A70C152009CA7CF /* JDStatusBarStyle.m in Sources */,
 				668AFED71A6F5B9D00B34B95 /* DRProgressWebView.m in Sources */,
+				6693CFDC1A70C152009CA7CF /* JDStatusBarNotification.m in Sources */,
+				6693CFDE1A70C152009CA7CF /* JDStatusBarView.m in Sources */,
 				668AFEB21A6F5A5600B34B95 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
