@@ -28,10 +28,13 @@
         self.netWorkImageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
         [self addSubview:self.netWorkImageView];
         
-        self.reloadButton = [[UIButton alloc] initWithFrame:(CGRect){0,0,120,30}];
+        self.reloadButton = [[UIButton alloc] initWithFrame:(CGRect){0,0,100,30}];
         self.reloadButton.center = (CGPoint){self.netWorkImageView.center.x,self.netWorkImageView.center.y+10+30+15};
         self.reloadButton.backgroundColor = [UIColor clearColor];
-        [self.reloadButton setImage:[UIImage imageNamed:@"wifi_retry"] forState:UIControlStateNormal];
+        [self.reloadButton setBackgroundImage:[UIImage imageNamed:@"wifi_retry"] forState:UIControlStateNormal];
+        [self.reloadButton setTitle:@"重试" forState:UIControlStateNormal];
+        [self.reloadButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [self.reloadButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
         self.reloadButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
         [self addSubview:self.reloadButton];
     }
