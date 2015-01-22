@@ -16,6 +16,8 @@
 		668AFECC1A6F5A5700B34B95 /* UIWebViewProgressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 668AFECB1A6F5A5700B34B95 /* UIWebViewProgressTests.m */; };
 		668AFED71A6F5B9D00B34B95 /* DRProgressWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 668AFED61A6F5B9D00B34B95 /* DRProgressWebView.m */; };
 		668AFEDA1A6F79A100B34B95 /* UIView+BookReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 668AFED91A6F79A100B34B95 /* UIView+BookReader.m */; };
+		6693CFD21A70ADFD009CA7CF /* online_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6693CFD11A70ADFD009CA7CF /* online_error@2x.png */; };
+		6693CFD41A70AE1E009CA7CF /* wifi_retry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6693CFD31A70AE1E009CA7CF /* wifi_retry@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		668AFED61A6F5B9D00B34B95 /* DRProgressWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRProgressWebView.m; sourceTree = "<group>"; };
 		668AFED81A6F79A100B34B95 /* UIView+BookReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BookReader.h"; sourceTree = "<group>"; };
 		668AFED91A6F79A100B34B95 /* UIView+BookReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BookReader.m"; sourceTree = "<group>"; };
+		6693CFD11A70ADFD009CA7CF /* online_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "online_error@2x.png"; sourceTree = "<group>"; };
+		6693CFD31A70AE1E009CA7CF /* wifi_retry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifi_retry@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		668AFEAF1A6F5A5600B34B95 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6693CFD01A70ADE3009CA7CF /* images */,
 				668AFEB01A6F5A5600B34B95 /* Info.plist */,
 				668AFEB11A6F5A5600B34B95 /* main.m */,
 			);
@@ -127,6 +132,15 @@
 				668AFECA1A6F5A5700B34B95 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6693CFD01A70ADE3009CA7CF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				6693CFD31A70AE1E009CA7CF /* wifi_retry@2x.png */,
+				6693CFD11A70ADFD009CA7CF /* online_error@2x.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +225,8 @@
 			files = (
 				668AFEBB1A6F5A5600B34B95 /* Main.storyboard in Resources */,
 				668AFEC01A6F5A5700B34B95 /* LaunchScreen.xib in Resources */,
+				6693CFD21A70ADFD009CA7CF /* online_error@2x.png in Resources */,
+				6693CFD41A70AE1E009CA7CF /* wifi_retry@2x.png in Resources */,
 				668AFEBD1A6F5A5700B34B95 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +442,7 @@
 				668AFED11A6F5A5700B34B95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		668AFED21A6F5A5700B34B95 /* Build configuration list for PBXNativeTarget "UIWebViewProgressTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +451,7 @@
 				668AFED41A6F5A5700B34B95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

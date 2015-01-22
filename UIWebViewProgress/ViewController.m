@@ -47,7 +47,8 @@
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     NSLog(@"%@,%d",error.localizedDescription,error.code);
     [webView hiddleActivityindicator];
-    if (error.code != NSURLErrorCancelled) {
+    NSString *ready = [webView stringByEvaluatingJavaScriptFromString:@"document.body"];
+    if (error.code != NSURLErrorCancelled && ![ready isEqualToString:@"complete"]) {
         __weak DRProgressWebView *weakWebView = (DRProgressWebView*)webView;
         [webView showReLoadButtoClicked:^{
             if (weakWebView) {

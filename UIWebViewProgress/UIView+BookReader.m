@@ -22,15 +22,16 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.netWorkImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
-        self.netWorkImageView.backgroundColor = [UIColor redColor];
-        self.netWorkImageView.frame = (CGRect){CGRectGetWidth(frame)/2-40,CGRectGetHeight(frame)/2-40,80,80};
+        self.netWorkImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"online_error"]];
+        self.netWorkImageView.backgroundColor = [UIColor clearColor];
+        self.netWorkImageView.frame = (CGRect){CGRectGetWidth(frame)/2-60,CGRectGetHeight(frame)/2-30,120,60};
         self.netWorkImageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
         [self addSubview:self.netWorkImageView];
         
-        self.reloadButton = [[UIButton alloc] initWithFrame:(CGRect){0,0,80,30}];
-        self.reloadButton.center = (CGPoint){self.netWorkImageView.center.x,self.netWorkImageView.center.y+10+40+15};
-        self.reloadButton.backgroundColor = [UIColor greenColor];
+        self.reloadButton = [[UIButton alloc] initWithFrame:(CGRect){0,0,120,30}];
+        self.reloadButton.center = (CGPoint){self.netWorkImageView.center.x,self.netWorkImageView.center.y+10+30+15};
+        self.reloadButton.backgroundColor = [UIColor clearColor];
+        [self.reloadButton setImage:[UIImage imageNamed:@"wifi_retry"] forState:UIControlStateNormal];
         self.reloadButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
         [self addSubview:self.reloadButton];
     }
@@ -184,7 +185,7 @@ static char BookReaderRetryBlockKey;
     if (!reloadView) {
         reloadView = [[DRReloadView alloc] initWithFrame:self.bounds];
         reloadView.tag = kReloadViewTag;
-        reloadView.backgroundColor = [UIColor yellowColor];
+        reloadView.backgroundColor = [UIColor whiteColor];
         reloadView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         [reloadView.reloadButton addTarget:self action:@selector(retryButtonClicked) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:reloadView];
